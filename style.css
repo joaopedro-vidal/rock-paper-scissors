@@ -11,6 +11,7 @@
     height: 15vh;
     align-items: center;
     background-color: #69d0b3;
+    flex-direction: row-reverse;
 }
 
 .container__header img {
@@ -31,7 +32,7 @@
 
 /*INTRODUCTION*/
 .container__introduction {
-    display: none;
+    display: flex;
     justify-content: center;
     flex-direction: column;
     max-width: 50%;
@@ -100,7 +101,7 @@
 
 /*GAME*/
 .container__main {
-    display: flex;
+    display: none;
     justify-content: center;
     flex-direction: column;
     max-width: 50%;
@@ -172,3 +173,10 @@
     appearance: none;
 }
 
+.hide {
+    display: none;
+}
+
+.hide__off {
+    display: flex;
+}
