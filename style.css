@@ -3,6 +3,7 @@
     padding: 0;
 }
 
+
 .container__header {
     display: flex;
     justify-content: space-around;
@@ -10,6 +11,11 @@
     height: 15vh;
     align-items: center;
     background-color: #69d0b3;
+}
+
+.container__header img {
+    width: 120px;
+    height: auto;
 }
 
 .nave__menu {
@@ -23,10 +29,131 @@
     color: #03001c;
 }
 
-.container__header img {
-    width: 120px;
+/*INTRODUCTION*/
+.container__introduction {
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 50%;
+    height: auto;
+    margin: 100px auto;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 50px;
+}
+
+
+.container__introduction h1 {
+    text-align: left;
+    font-size: 32px;
+    padding-bottom: 20px;
+    font-weight: 500;
+}
+
+.container__introduction p {
+    font-size: 22px;
+    max-width: 90%;
+    text-align: justify;
+}
+
+.container__bowser {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 50px;
+    justify-content: center;
+}
+
+.div__balloon {
+    position: relative;
+    width: 50%;
+    padding: 10px;
+    background-color: #fff;
+    border: 2px solid #d2d2d2;
+    border-radius: 10px;
+    margin: 20px;
+  }
+
+.div__balloon::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -20px; /* Ajuste para a seta ficar no lado direito */
+    margin-top: -10px; /* Ajuste para posicionar verticalmente a seta */
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent #d2d2d2; /* A seta fica no lado direito */
+}
+
+.div__balloon p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+}
+
+.button__startgame {
+    width: 20%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/*GAME*/
+.container__main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 50%;
+    height: auto;
+    margin: 100px auto;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 50px;
+}
+
+.container__toad {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container__toad p {
+    font-size: 22px;
+}
+
+.toad__image img{
+    width: 200px;
     height: auto;
 }
+
+.div__balloon__toad {
+    position: relative;
+    width: 50%;
+    padding: 5px 15px;
+    background-color: #fff;
+    border: 2px solid #d2d2d2;
+    border-radius: 10px;
+    margin: 30px;
+    text-align: center;
+  }
+  
+  .div__balloon__toad::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -20px; /* Define a seta à esquerda */
+    margin-top: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #d2d2d2 transparent transparent; /* A seta fica à esquerda */
+  }
+  
+  .div__balloon__toad p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+  }
 
 .container__image {
     display: flex;
@@ -34,4 +161,14 @@
     align-items: center;
     width: 100%;
     margin: 100px 0;
+    gap: 50px;
+    flex-wrap: wrap;
+    border-radius: 20px;
 }
+
+.container__image button {
+    cursor: pointer;
+    border: 2px solid black;
+    appearance: none;
+}
+

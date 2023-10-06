@@ -58,3 +58,36 @@ function game() {
     }
 }
 game();
+
+
+// script.js
+const startButton = document.getElementById("startButton");
+const progressBar = document.querySelector(".progress-bar");
+const img = document.querySelector("img");
+
+startButton.addEventListener("click", () => {
+  // Defina a largura máxima da barra (100% no exemplo)
+  const maxWidth = 100;
+
+  // Animação da barra de progresso
+  let width = 0;
+  const animationInterval = setInterval(() => {
+    if (width >= maxWidth) {
+      clearInterval(animationInterval);
+    } else {
+      width++;
+      progressBar.style.width = width + "%";
+    }
+  }, 10); // Velocidade da animação
+
+  // Animação da imagem
+  let imgRight = 0;
+  const imgAnimationInterval = setInterval(() => {
+    if (imgRight >= maxWidth) {
+      clearInterval(imgAnimationInterval);
+    } else {
+      imgRight++;
+      img.style.right = imgRight + "%";
+    }
+  }, 10); // Velocidade da animação
+});
