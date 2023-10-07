@@ -50,15 +50,24 @@
                 </div>
             </div>
             <aside class="container__image">
-                <button>
+                <button class="game__button" onclick="play()">
                     <img src="./_assets/_image/rock.png" alt="Rock image of game">
                 </button>
-                <button>
+                <button class="game__button" onclick="play()">
                     <img src="./_assets/_image/paper.png" alt="Paper image of game">
                 </button>
-                <button>
+                <button class="game__button" onclick="play()">
                     <img src="./_assets/_image/scissors.png" alt="Scissors image of game">
                 </button>
+                <div class="container__results">
+                    <picture>
+                        <img src="_assets/_image/princess_mario.png" alt="Princess Mario of game Super Mario Bross">
+                    </picture>
+                    <blockquote class="blockquote__results">
+                        <h4></h4>
+                        <h5></h5>
+                    </blockquote>
+                </div>
             </aside>
         </section>
     </main>
@@ -68,6 +77,7 @@
     </footer>
 
    <script src="moveonscreen.js"></script>
+   <script src="gameon.js"></script>
 </body>
 
 </html>

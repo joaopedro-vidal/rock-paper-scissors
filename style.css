@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
@@ -161,6 +162,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: auto;
     margin: 100px 0;
     gap: 50px;
     flex-wrap: wrap;
@@ -171,6 +173,34 @@
     cursor: pointer;
     border: 2px solid black;
     appearance: none;
+}
+
+.container__results {
+    display: none;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+    flex-direction: row-reverse;
+    margin-top: 50px;
+}
+
+.container__results img {
+    width: 200px;
+    height: auto;
+}
+
+.blockquote__results {
+    font-size: 22px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.blockquote__results h4 {
+    font-weight: 400;
+}
+
+.blockquote__results h5 {
+    font-weight: 400;
 }
 
 .hide {
