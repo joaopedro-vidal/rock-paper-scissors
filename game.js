@@ -47,3 +47,19 @@ function playerPlay() {
 
 
 
+
+// validates user input to make sure its one of the choices
+function theValidater(playerSelection) {
+    if (
+      playerSelection === "rock" ||
+      playerSelection === "paper" ||
+      playerSelection === "scissors"
+    ) {
+      console.log("validated");
+      return playerSelection;
+    } else {
+      console.log("invalid");
+      return undefined;
+    }
+  }
+  
