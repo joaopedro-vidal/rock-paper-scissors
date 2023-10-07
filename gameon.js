@@ -29,7 +29,7 @@ function updateScoreDisplay() {
     document.getElementById('winner').innerHTML = "";
 }
 
-//document.addEventListener("DOMContentLoaded", updateScoreDisplay())
+document.addEventListener("DOMContentLoaded", updateScoreDisplay())
 
 buttonsSelector.forEach((button, index) => {
     button.addEventListener("click", () => {
