@@ -101,4 +101,16 @@ function playRound() {
       }
     }
   }
+
+
+function scoreTracker(point) {
+    if (point === "player") {
+      playerPoints++;
+    } else if (point === "computer") {
+      computerPoints++;
+    } else {
+      tieRounds++;
+    }
+  }
+  
   
