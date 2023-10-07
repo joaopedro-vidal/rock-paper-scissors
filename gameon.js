@@ -17,6 +17,7 @@ function updateScoreDisplay() {
             document.getElementById('winner').innerHTML = "The Winner is You";
         else if (playerScore < compterScore)
             document.getElementById('winner').innerHTML = "The Winner is the Computer";
+        else document.getElementById('winner').innerHTML = "Draw";
 
         playerScore = 0;
         compterScore = 0;
