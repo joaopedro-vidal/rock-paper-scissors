@@ -4,14 +4,19 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html {
+    background-color: #333e50;
+}
 
 .container__header {
     display: flex;
-    justify-content: space-around;
+    justify-content: left;
     width: 100%;
     height: 15vh;
+    max-width: 100%;
+    padding-left: 5%;
     align-items: center;
-    background-color: #69d0b3;
+    background-color: #333e50;
     flex-direction: row-reverse;
 }
 
@@ -20,15 +25,10 @@
     height: auto;
 }
 
-.nave__menu {
-    display: flex;
-}
-
-.nav__menu a{
+.container__header p{
     font-size: 26px; 
     padding: 0 30px;   
-    text-decoration: none;
-    color: #03001c;
+    color: #fff;
 }
 
 /*INTRODUCTION*/
@@ -42,6 +42,7 @@
     border: 2px solid black;
     border-radius: 20px;
     padding: 50px;
+    background-color: #dce0e6;
 }
 
 
@@ -68,9 +69,9 @@
 .div__balloon {
     position: relative;
     width: 50%;
-    padding: 10px;
+    padding: 10px 0 10px 25px;
     background-color: #fff;
-    border: 2px solid #d2d2d2;
+    border: 2px solid #000;
     border-radius: 10px;
     margin: 20px;
   }
@@ -79,11 +80,11 @@
     content: "";
     position: absolute;
     top: 50%;
-    right: -20px; /* Ajuste para a seta ficar no lado direito */
-    margin-top: -10px; /* Ajuste para posicionar verticalmente a seta */
+    right: -20px; 
+    margin-top: -10px; 
     border-width: 10px;
     border-style: solid;
-    border-color: transparent transparent transparent #d2d2d2; /* A seta fica no lado direito */
+    border-color: transparent transparent transparent #000; 
 }
 
 .div__balloon p {
@@ -98,6 +99,10 @@
     width: 20%;
     padding: 10px;
     cursor: pointer;
+    font-size: 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
 }
 
 /*GAME*/
@@ -111,6 +116,11 @@
     border: 2px solid black;
     border-radius: 20px;
     padding: 50px;
+    background-color: #dce0e6;
+}
+
+.game__button:hover {
+    transform: scale(1.1);
 }
 
 .container__toad {
@@ -132,7 +142,7 @@
     width: 50%;
     padding: 5px 15px;
     background-color: #fff;
-    border: 2px solid #d2d2d2;
+    border: 2px solid #000;
     border-radius: 10px;
     margin: 30px;
     text-align: center;
@@ -142,11 +152,11 @@
     content: "";
     position: absolute;
     top: 50%;
-    left: -20px; /* Define a seta à esquerda */
+    left: -20px; 
     margin-top: -10px;
     border-width: 10px;
     border-style: solid;
-    border-color: transparent #d2d2d2 transparent transparent; /* A seta fica à esquerda */
+    border-color: transparent #000 transparent transparent; 
   }
   
   .div__balloon__toad p {
@@ -193,14 +203,37 @@
     font-size: 22px;
     text-align: center;
     margin-right: 20px;
+    position: relative;
+    background-color: #fff; 
+    color: #000; 
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 300px; 
+    border: 2px solid #000;
 }
 
 .blockquote__results h4 {
     font-weight: 400;
+    margin: 0;
+    font-size: 22px;
+    padding-bottom: 10px;
 }
 
 .blockquote__results h5 {
     font-weight: 400;
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.blockquote__results::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -10px; 
+    border-width: 10px; 
+    border-style: solid;
+    border-color: transparent transparent transparent #000; 
 }
 
 .hide {
@@ -209,4 +242,132 @@
 
 .hide__off {
     display: flex;
+}
+
+@media (max-width:1025px ) { 
+    
+    .container__introduction, .container__main {
+        max-width: 70%;
+    }
+
+    .container__introduction h1 {
+        font-size: 28px;
+    }
+
+    .container__introduction p {
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 770px) {
+
+    .container__header, .container__introduction, .container__main {
+        box-sizing: border-box;
+    }
+
+    .container__bowser {
+        margin: 50px 0;
+    }
+
+    .div__balloon p {
+        font-size: 18px;
+    }
+
+    .container__main {
+       max-width: 95%;
+    }
+}
+
+@media (max-width: 430px) {
+    .container__header {
+        padding: 0;
+    }
+
+    .container__header p {
+        font-size: 24px;
+    }
+
+    .container__introduction h1 {
+        font-size: 24px;
+    }
+
+    .container__introduction p {
+        font-size: 18px;
+    }
+
+    .container__bowser {
+        flex-wrap: wrap;
+    }
+
+    .container__bowser img {
+        width: 200px;
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .div__balloon {
+        width: 100%;
+        margin: 0;
+    }
+
+    .div__balloon::before {
+        top: 0;
+        right: 140px;
+        border-width: 0 10px 10px 10px;
+        border-color: transparent transparent #000 transparent;
+    }
+
+    .button__startgame {
+        width: 30%;
+    }
+
+    .container__main {
+        max-width: 95%;
+     }
+
+     .container__toad {
+        justify-content: center;
+     }
+
+     .container__toad p {
+        font-size: 20px;
+        padding: 0 10px 15px 10px;
+     }
+
+     .toad__image img {
+        width: 150px;
+     }
+
+     .div__balloon__toad::before {
+        top: 0;
+        left: 80px;
+        border-width: 0 10px 10px 10px;
+        border-color: transparent transparent #000 transparent;
+     }
+
+     .container__results{
+        flex-wrap: wrap;
+        justify-content: center;
+     }
+
+     .container__results h4 {
+        font-size: 20px;
+     }
+
+     .blockquote__results {
+        margin: 0;
+     }
+
+     .blockquote__results::before {
+        top: 0;
+        left: 140px;
+        border-width: 0 10px 10px 10px;
+        border-color: transparent transparent #000 transparent;
+     }
+
+     .button__startgame {
+        width: 50%;
+     }
+
 }
