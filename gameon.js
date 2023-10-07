@@ -10,9 +10,7 @@ let round = 0;
 
 
 function updateScoreDisplay() {
-    console.log('player-score : ',playerScore.toString());
-    console.log('compterScore-score : ',compterScore.toString());
-    console.log('round : ',round.toString());
+
     round++;
     document.getElementById('player-score').innerHTML = playerScore.toString();
     document.getElementById('computer-score').innerHTML = compterScore.toString();
@@ -26,11 +24,12 @@ function updateScoreDisplay() {
         playerScore = 0;
         compterScore = 0;
         round = 1;
-
     }
+    else
+    document.getElementById('winner').innerHTML = "";
 }
 
-document.addEventListener("DOMContentLoaded", updateScoreDisplay())
+//document.addEventListener("DOMContentLoaded", updateScoreDisplay())
 
 buttonsSelector.forEach((button, index) => {
     button.addEventListener("click", () => {
