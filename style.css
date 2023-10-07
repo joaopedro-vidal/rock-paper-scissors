@@ -371,3 +371,31 @@ html {
      }
 
 }
+
+.score-display{
+    height: 100px;
+    background-color: #333e50;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.score, .round
+{
+    display: flex;
+    gap: 10px;
+
+}
+
+.winner-display
+{
+
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: green;
+    margin: 5px;
+}
