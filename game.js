@@ -34,10 +34,6 @@ function playerPlay() {
     }
   } while (reviewed === undefined);
 
-  //   while (reviewed === undefined) {
-  //     console.log("please enter a valid value");
-  //     reviewed = playerPlay();
-  //   }
   return reviewed;
 }
 
@@ -56,6 +52,7 @@ function theValidater(playerSelection) {
   }
 }
 
+// for playing a single round
 function playRound() {
   let playerChoice = playerPlay();
   let computerChoice = computerPlay();
@@ -68,6 +65,7 @@ function playRound() {
   console.log("RoundWinner: " + roundWinner);
 }
 
+// the ref decides who wins each round
 function theRef(player, computer) {
   if (player === computer) {
     console.log("tieee");
@@ -101,6 +99,7 @@ function theRef(player, computer) {
   }
 }
 
+// keeps track of the overall score
 function scoreTracker(point) {
   if (point === "player") {
     playerPoints++;
@@ -111,6 +110,7 @@ function scoreTracker(point) {
   }
 }
 
+// main driver function
 function game() {
   console.log("Would you like to play a game? Muahahah");
   console.log("Lets play 5 Rounds of Rock Paper Scissors");
