@@ -7,12 +7,11 @@ let compterScore = 0;
 let round = 0;
 
 function updateScoreDisplay() {
-
-    round++;
     document.getElementById('player-score').innerHTML = playerScore.toString();
     document.getElementById('computer-score').innerHTML = compterScore.toString();
     document.getElementById('round').innerHTML = round.toString();
-    if (round >= 5) {
+    round++;
+    if (round > 5) {
         if (playerScore > compterScore)
             document.getElementById('winner').innerHTML = "The Winner is You";
         else if (playerScore < compterScore)
