@@ -68,3 +68,37 @@ function playRound() {
     console.log("RoundWinner: " + roundWinner);
   }
   
+
+  function theRef(player, computer) {
+    if (player === computer) {
+      console.log("tieee");
+      return "tie";
+    } else if (player === "rock") {
+      if (computer === "scissors") {
+        console.log("player wins, rock beats scissors");
+        return "player";
+      } else {
+        console.log("compuer wins, rocks loses to paper");
+        return "computer";
+      }
+    } else if (player === "paper") {
+      if (computer === "rock") {
+        console.log("player wins, paper beats rock");
+        return "player";
+      } else {
+        console.log("computer wins, papers loses to scissors");
+        return "computer";
+      }
+    }
+    // player chose scissors
+    else {
+      if (computer === "paper") {
+        console.log("player wins, scissors beats paper");
+        return "player";
+      } else {
+        console.log("computer wins, scissors loses to rock");
+        return "computer";
+      }
+    }
+  }
+  
